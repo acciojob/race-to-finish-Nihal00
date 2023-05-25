@@ -17,6 +17,4 @@ promises.push(prom4);
 const prom5 = new Promise((resolve) => setTimeout(resolve, 5000, "five"))
 promises.push(prom5);
 
-const ans = Promise.any(promises).then((value) => console.log(value))
-
-document.getElementById('output').innerText = ans;
+Promise.any(promises).then((value) => document.getElementById('output').innerText = value);
